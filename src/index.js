@@ -63,17 +63,20 @@ export default class Component extends React.PureComponent {
 
       Animated.timing(this.loadingValue.width, {
         toValue: widthEnd,
-        duration: this.props.animationDurationWidth
+        duration: this.props.animationDurationWidth,    
+        useNativeDriver: false
       }).start();
 
       Animated.timing(this.loadingValue.borderRadius, {
         toValue: borderRadiusEnd,
-        duration: 400
+        duration: 400,
+        useNativeDriver: false
       }).start();
 
       Animated.timing(this.loadingValue.opacity, {
         toValue: opacityEnd,
-        duration: 300
+        duration: 300,
+        useNativeDriver: false
       }).start();
     }
   }
